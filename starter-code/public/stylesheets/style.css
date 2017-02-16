@@ -6,3 +6,37 @@ body {
 a {
   color: #00B7FF;
 }
+
+#map {
+  width: 800px;
+  height: 600px;
+}
+
+.head-container {
+  width: 800px;
+  height: 150px;
+}
+
+.button-container {
+  float: right;
+  width: 400px;
+  height: 150px;
+}
+
+.flag-button {
+  float: left;
+  margin: 10px;
+  border: solid 2px black;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+#green {
+}
+
+#yellow {
+}
+
+#red {
+}
