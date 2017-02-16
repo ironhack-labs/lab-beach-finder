@@ -4,10 +4,13 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+const mongoose = require("mongoose");
 
 var index = require('./routes/index');
 
 var app = express();
+//mongoose configuration
+mongoose.connect("mongodb://localhost:27017/lab-beach-finder");
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

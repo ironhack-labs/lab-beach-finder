@@ -1,11 +1,43 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>Beach Finder</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <h1>Search for a Beach</h1>
+      Search:
+      <input type="text" id="searchTextField" name="searchTextField" placeholder="Search Beach">
+      <br><br>
+
+    <div id="map"></div>
+
+    <h1>Add a Beach</h1>
+    <form id="submit" method="POST" action="/add-beach">
+      Search:
+      <input type="text" name="name" placeholder="Name">
+      <input type="text" name="longitude" placeholder="longitude" readonly>
+      <input type="text" name="latitude" placeholder="latitude" readonly>
+      FLAG:
+      <select name="flag">
+        <option value="GREEN">GREEN</option>
+        <option value="YELLOW">YELLOW</option>
+        <option value="RED">RED</option>
+      </select>
+      <input type="submit" name="">
+    </form>
+
+    <ul>
+      <% beaches.forEach((beach) => { %>
+      <li>
+          <%= beach.name%> | <%= beach.flag %>
+      </li>
+    <% }) %>
+    </ul>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js">
+    </script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcawoqSxq0XhugyPjDyfxchcJmLGiP9EQ&libraries=places"></script>
+    <script type="text/javascript" src="javascripts/main.js"></script>
   </body>
 </html>
