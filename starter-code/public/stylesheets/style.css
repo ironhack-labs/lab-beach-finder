@@ -6,3 +6,36 @@ body {
 a {
   color: #00B7FF;
 }
+
+#map{
+  width: 400px;
+  height: 400px;
+}
+
+form;{
+  border: none;
+     border-bottom: 2px solid red;
+}
+
+.button {
+    margin:10px;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#green{
+  background-color: #4CAF50;
+}
+
+#yellow{
+  background-color: #FFF380;
+}
+
+#red{
+  background-color: #f44336;
+}
