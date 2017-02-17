@@ -3,9 +3,24 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   </head>
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <div id="map"></div>
+    <!-- <form id="form" action="/beach" method='POST'> -->
+      <input type="text" id="pac-input" name="search" placeholder="Search map">
+      <div id='flags'>
+        <button class="flag" id='red'></button>
+        <button class="flag" id='yellow'></button>
+        <button class="flag" id='green'></button>
+      </div>
+      <!-- <button type="submit">Search</button> -->
+    <!-- </form> -->
+    <ul id="beaches"></ul>
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhLwoCzgOK-v2wG1njqvt8R8N0zKpLrTc&libraries=places"></script>
+    <script src="javascripts/main.js"></script>
   </body>
 </html>
