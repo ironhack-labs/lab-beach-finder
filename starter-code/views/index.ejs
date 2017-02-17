@@ -10,22 +10,23 @@
       <input type="text" id="searchTextField" name="searchTextField" placeholder="Search Beach">
       <br><br>
 
-    <div id="map"></div>
+      <h1>Add a Beach</h1>
+      <form id="submit" method="POST" action="/add-beach">
+        Add
+        <input type="text" name="name" placeholder="Name">
+        <input type="text" name="longitude" placeholder="longitude" readonly>
+        <input type="text" name="latitude" placeholder="latitude" readonly>
+        FLAG:
+        <select name="flag">
+          <option value="GREEN">GREEN</option>
+          <option value="YELLOW">YELLOW</option>
+          <option value="RED">RED</option>
+        </select>
+        <input type="submit" name="">
+      </form>
+     <br><br>
 
-    <h1>Add a Beach</h1>
-    <form id="submit" method="POST" action="/add-beach">
-      Search:
-      <input type="text" name="name" placeholder="Name">
-      <input type="text" name="longitude" placeholder="longitude" readonly>
-      <input type="text" name="latitude" placeholder="latitude" readonly>
-      FLAG:
-      <select name="flag">
-        <option value="GREEN">GREEN</option>
-        <option value="YELLOW">YELLOW</option>
-        <option value="RED">RED</option>
-      </select>
-      <input type="submit" name="">
-    </form>
+    <div id="map"></div>
 
     <ul>
       <% beaches.forEach((beach) => { %>
