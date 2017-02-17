@@ -1,0 +1,17 @@
+{
+  "name": "starter-code",
+  "description": "",
+  "main": "",
+  "authors": [
+    "juliapolbach <juliapolbach@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/ironhack-labs/lab-beach-finder",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
