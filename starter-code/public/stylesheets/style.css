@@ -6,3 +6,41 @@ body {
 a {
   color: #00B7FF;
 }
+
+#map {
+  width: 100%;
+   height: 300px;
+}
+
+.form-map {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.form-map #searchTextField {
+  width: 250px;
+}
+.form-map .cont-search {
+  margin-bottom: 20px;
+  float: left;
+}
+.form-map .cont-flags {
+  margin-bottom: 20px;
+  float: right;
+  display: none;
+}
+
+.form-map .cont-flags .btn-flag {
+  width: 50px;
+  height: 50px;
+  border: none;
+}
+.form-map .cont-flags .btn-flag.red {
+  background-color: red;
+}
+.form-map .cont-flags .btn-flag.green {
+  background-color: green;
+}
+.form-map .cont-flags .btn-flag.yellow {
+  background-color: yellow;
+}
