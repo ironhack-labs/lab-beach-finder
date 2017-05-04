@@ -2,10 +2,26 @@
 <html>
   <head>
     <title><%= title %></title>
+    <!--<title>Beachs</title>-->
     <link rel='stylesheet' href='/stylesheets/style.css' />
+
   </head>
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <div id='controls'>
+      <input id="pac-input" class="controls" type="text"
+        placeholder="Enter a location">
+      <input type="submit" value='Buscar'/>
+    </div>
+
+    <div id="map"></div>
+
   </body>
+  <script
+    async
+    defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWclYtJVZNhJujjVs64dIc_mz7N_wUpz0&libraries=places&callback=startMap">
+    </script>
+    <script type="text/javascript" src="/javascripts/index.js"></script>
 </html>
