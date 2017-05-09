@@ -1,11 +1,34 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>Google maps</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <h1>Google maps</h1>
+    <p>Welcome to Maps</p>
+    <div class="form-map">
+
+      <form action="/" method="post">
+
+        <div class="cont-search">
+          <label for="search">search</label>
+          <input name="search" value="" id="searchTextField" type="text" size="50" placeholder="Anything you want!">
+          <button type="submit">Send</button>
+        </div>
+        <div class="cont-flags">
+          <input class="btn-flag green" type="radio" name="flags" value="red">
+          <input class="btn-flag yellow" type="radio" name="flags" value="yellow">
+          <input class="btn-flag red" type="radio" name="flags" value="green">
+        </div>
+
+      </form>
+
+    </div>
+
+    <div id="map"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?result_type=natural_feature&key=AIzaSyBxmJJkf2dbmpaR1fbTEadNdfr6D5UiDGY&libraries=places&callback=initMap" async defer></script>
+    <script src="/js/main.js"></script>
   </body>
 </html>
