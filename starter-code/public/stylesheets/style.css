@@ -6,3 +6,22 @@ body {
 a {
   color: #00B7FF;
 }
+
+#map {
+  width: 1200px;
+  height: 500px;
+}
+
+#searchTextField {
+  height: 30px;
+  margin-bottom: 20px;
+}
+
+#button-input {
+  background-color: orange;
+  color: white;
+  font-size: 18px;
+  height: 30px;
+  width: 80px;
+  margin-left: 20px;
+}

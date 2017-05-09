@@ -1,3 +1,4 @@
+/*jshint esversion: 6*/
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -6,6 +7,11 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
+
+const Beach = require('./models/Beach.js');
+const mongoose = require('mongoose');
+mongoose.connect("mongodb://localhost/beachtest");
+
 
 var app = express();
 
