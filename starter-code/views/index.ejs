@@ -1,11 +1,35 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+</head>
+
+<body>
+    <h1>Beach Finder</h1>
+    <input type="text" id="beach" placeholder="Beaches">
+
+    <button type="submit" name="submit">Search</button>
+<div class="status">
+  <form class="beach-status" action="index.html" method="post">
+    <input type="radio" name="" value="Red">Red<br>
+    <input type="radio" name="" value="Yellow">Yellow<br>
+    <input type="radio" name="" value="Green">Green<br>
+
+  </form>
+</div>
+
+
+
+    <div id="map"> </div>
+</body>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJN77Ru1GI4j9aXygNrZSA_CluLlat_6k&libraries=places">
+</script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="../javascript/main.js"></script>
+
 </html>
