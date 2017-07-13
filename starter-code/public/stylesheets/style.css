@@ -1,15 +1,53 @@
+#green:hover {
+  background-color: green;
+}
+
+.green {
+  background-color: green;
+}
+
+#yellow:hover {
+  background-color: yellow;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+#red:hover {
+  background-color: red;
+}
+
+.red {
+  background-color: red;
+}
+
+.flag {
+  height: 30px;
+}
+
+.flags {
+  position: relative;
+  left: 1050px;
+}
+
 
 /* Always set the map height explicitly to define the size of the div
  * element that contains the map. */
+
 #map {
   height: 100%;
 }
+
+
 /* Optional: Makes the sample page fill the window. */
+
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
 }
+
 .controls {
   margin-top: 10px;
   border: 1px solid transparent;
@@ -51,6 +89,7 @@ html, body {
   font-size: 13px;
   font-weight: 300;
 }
+
 #target {
   width: 345px;
 }
