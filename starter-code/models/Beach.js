@@ -14,4 +14,4 @@ const BeachSchema = new Schema({
 
 BeachSchema.index({location: '2dsphere'});
 
-module.exports = mongoose.model('Beach', PlaceSchema);
+module.exports = mongoose.model('Beach', BeachSchema);
