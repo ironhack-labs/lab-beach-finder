@@ -1,11 +1,34 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <h1><%= title %></h1>
+  <p>Welcome to
+    <%= title %>
+  </p>
+
+  <div id="findbeaches">
+    Find beaches
+  </div>
+
+
+  <div id="locationField">
+    <input id="autocomplete" placeholder="Enter a beach" type="text" />
+    <button type="button" name="search">Search</button>
+  </div>
+
+  <div id="map"></div>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-Ft0tXCJdiSbjptMjq3DI7vsumk8Q3aQ&libraries=places"></script>
+  <script type="text/javascript" src="javascript/main.js"></script>
+
+</body>
+
 </html>
