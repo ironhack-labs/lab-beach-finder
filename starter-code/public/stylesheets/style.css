@@ -6,3 +6,11 @@ body {
 a {
   color: #00B7FF;
 }
+#map {
+     height: 500px;
+     width: 100%;
+    }
+    #locationField {
+            height: 20px;
+            margin-bottom: 2px;
+          }

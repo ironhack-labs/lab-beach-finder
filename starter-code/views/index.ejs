@@ -7,5 +7,14 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <div id="locationField">
+      <input id="autocomplete" placeholder="Enter your address" type="text"></input>
+      <button type="button" id="submit" name="button">Search</button>
+    </div>
+
+     <div id="map"></div>
   </body>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaKBuE3598ur1zAnQve3oQwywGfM2Gnk4&libraries=places"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+ <script type="text/javascript" src="/javascripts/main.js"></script>
 </html>
