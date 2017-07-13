@@ -10,3 +10,26 @@ a {
 #map{
   height: 500px;
 }
+
+.flags{
+  position: absolute;
+  right: 60px;
+  top: 80px;
+  display: inline-block;
+}
+
+.flags-button{
+  width: 32px;
+  height: 32px;
+  border: 1px solid black;
+}
+
+#red-flag:hover{
+  background-color: red;
+}
+#yellow-flag:hover{
+  background-color: yellow;
+}
+#green-flag:hover{
+  background-color: green;
+}
