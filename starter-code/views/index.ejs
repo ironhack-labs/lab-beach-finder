@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <h1>Beach finder</h1>
+<div class="flags">
+  <button class=" flag red" id="red" type="button" name="button">red</button>
+  <button class="flag yellow" id="yellow" type="button" name="button">yellow</button>
+  <button class="flag green" id="green" type="button" name="button">green</button>
+
+</div>
+
+  <input id="pac-input" class="controls" type="text" placeholder="Search Box"><br>
+  <div id="map">
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPo-cuAvYtLq8pjYQFuBy8coDPrOrTOBo&libraries=places&callback=initAutocomplete"
+         async defer></script>
+  <script src="/javascripts/main.js" type="text/javascript">
+  </script>
+</body>
+
 </html>
