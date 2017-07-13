@@ -1,11 +1,25 @@
-<!DOCTYPE html>
+
 <html>
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Places Searchbox</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+    <div id="map"></div>
+
+    <div class="container">
+      <img src="http://www.iconsplace.com/download/red-empty-flag-512.png" alt="" onclick="saveFlag('green')">
+      <img src="" alt="" onclick="saveFlag('yellow')">
+      <img src="" alt="" onclick="saveFlag('red')">
+    </div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAm1aIGqcpGtkzODqjWJutNzP9_IDk-wdI&libraries=places&callback=initAutocomplete"
+         async defer></script>
+    <script type="text/javascript" src="main.js">
+
+    </script>
   </body>
 </html>
