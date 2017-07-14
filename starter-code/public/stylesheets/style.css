@@ -6,3 +6,23 @@ body {
 a {
   color: #00B7FF;
 }
+
+#map {
+  width: 1000px;
+  height: 400px;
+}
+
+#searchField {
+  width: 400px;
+  margin-bottom: 10px;
+}
+
+ul {
+  display: none;
+}
+
+li {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+}
