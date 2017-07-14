@@ -7,5 +7,19 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <form action="GET">
+      <input type="text" id="searchField" placeholder="Search">
+      <button id='search'>Search</button>
+    </form>
+    <div id="map"></div>
+    <ul id='flags'>
+    <li class='flag red'></li>
+    <li class='flag yellow'></li>
+    <li class='flag green'></li>
+    </ul>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="/scripts/map.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDurVq8SWaTjabnbsoZRHOnst1d49YOb3Y&libraries=places&callback=initMap">
+    </script>
   </body>
 </html>
