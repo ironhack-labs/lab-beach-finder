@@ -1,9 +1,7 @@
 function initialize() {
-  var globalName="";
   var mapOptions = {
     center: {lat: 42.75873, lng: -9.075063},
     zoom: 13,
-    scrollwheel: false
   };
 
   var map = new google.maps.Map(document.getElementById('map'),
@@ -19,10 +17,12 @@ function initialize() {
   // an HTML text input box.
   var autocomplete = new google.maps.places.Autocomplete(input);
 
-
-autocomplete.addListener( 'place_changed', function() {
+  var geoObject= "";
+  autocomplete.addListener( 'place_changed', function() {
     var place = autocomplete.getPlace();
-    globalName=place;
+    Name = place;
+    console.log(Name);
+
     if (!place.geometry.location) {
        window.alert("No details available for input: '" + place.name + "'");
       return;
@@ -36,7 +36,16 @@ autocomplete.addListener( 'place_changed', function() {
   });
   });
 
+  $(".flag").click(function(event){
+  var color = ($(this).attr("name"));
+  var newBeach = {
+    beachName: geoObject.name,
+    flag: color
+  };
+  console.log(newBeach);
+  });
 }
+
 window.onload = function(){
   initialize();
 };

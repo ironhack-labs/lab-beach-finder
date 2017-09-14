@@ -59,3 +59,19 @@ a {
   font-size: 13px;
   font-weight: 300;
 }
+
+.flag{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+#red:hover{
+  background-color: red;
+}
+#yellow:hover{
+  background-color: yellow;
+}
+#green:hover{
+  background-color: green;
+}
