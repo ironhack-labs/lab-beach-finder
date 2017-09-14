@@ -6,9 +6,23 @@ router.get('/', (req, res, next) => {
   res.render('index');
 });
 
-router.post('/search', (req, res, next) => {
-  
-});
+// router.post('/search', (req, res, next) => {
+//   const beachInfo = {
+//   name: req.body.name,
+//   flag: req.body.flag
+//   };
+//   beachInfo.save((err) => {
+//     if (err) {
+//       next(err);
+//     }
+//     else {
+//     res.redirect('index');
+//
+//     }
+//   });
+// });
+
+
 
 
 module.exports = router;
