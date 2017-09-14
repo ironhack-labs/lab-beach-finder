@@ -9,8 +9,50 @@ router.get('/', function(req, res, next) {
 
 router.post('/beach', function(req, res, next) {
   var beachName= req.body.beachName;
-  var flagColor= req.body.flag;
+  var color= req.body.flag;
   console.log(req.body);
+
+  var beach = new Beach({
+    beachName: beachName,
+    flag: color
+  });
+
+  Beach.findOne({beachName: beachName}, function(err, doc){
+    if (err) {
+      return next(error);
+    } else {
+      if (doc) {
+        Beach.findOneAnddUpdate({beachName: beachName}, {flag: flagColor}, function(err, doc){
+          if(err){
+            return next(err);
+          } else {
+            beach.save((err), function(){
+              if (err) {
+                return next(err);
+              } else {
+                console.log(beach);
+              }
+            });
+          }
+        });
+      }
+    }
+  });
+
+  $.ajax({
+  url: "/beach",
+  method: "POST",
+  data:{
+    newBeach
+  },
+  success: function (response) {
+    console.log(response);
+  },
+  error: function (err) {
+    console.log(err);
+    }
+  });
+
 });
 
 module.exports = router;

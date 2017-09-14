@@ -13,19 +13,17 @@ function initialize() {
 
   var input =  document.getElementById('pac-input');
 
-  // Create the autocomplete helper, and associate it with
-  // an HTML text input box.
   var autocomplete = new google.maps.places.Autocomplete(input);
 
   var geoObject= "";
-  autocomplete.addListener( 'place_changed', function() {
+
+  autocomplete.addListener('place_changed', function() {
     var place = autocomplete.getPlace();
     geoObject = place;
     console.log(geoObject);
 
-    if (!place.geometry.location) {
+    if(!place.geometry.location){
        window.alert("No details available for input: '" + place.name + "'");
-      return;
     } else {
       map.setCenter(place.geometry.location);
       map.setZoom(17);
@@ -42,10 +40,48 @@ function initialize() {
     beachName: geoObject.name,
     flag: color
   };
+
+  $.ajax({
+  url: "/beach",
+  type: "POST",
+  data:{
+    newBeach
+  },
+  success: function (response) {
+    console.log(response);
+  },
+  error: function (err) {
+    console.log(err);
+    }
+  });
   console.log(newBeach);
   });
+
 }
 
+
+
 window.onload = function(){
+
   initialize();
+
+  var flagRating = Array.from(document.querySelectorAll('.flag'));
+    flagRating.forEach(function(button){
+       button.addEventListener('click', function(event){
+          event.preventDefault();
+
+          let input = document.getElementById("pac-input").value;
+          let color = this.name;
+
+          $.ajax({
+            type:    'POST',
+            url:     '/',
+            data:    {name: input, color},
+         });
+
+         location.reload();
+
+       });
+    });
+
 };
