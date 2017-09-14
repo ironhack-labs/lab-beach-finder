@@ -1,26 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>BEACH-FINDER</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-      <p>Welcome to BeachSearch</p>
-      <div>
-        <form action="/" method="get">
-          Beach: <input id="pac-input" class="controls" type="text" placeholder="Search Box">
-          <button type="submit" name="submit">Search</button>
-        </form>
-      </div>
-      <div id="map">
-      </div>
-
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsTxaLjBpUZyb3MXCobvZeHwOvqgGPdhM&libraries=places">
-    </script>
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.min.js"
-      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-      crossorigin="anonymous"></script>
-    <script type="text/javascript" src="/javascripts/main.js"></script>
+    <h1>BEACH-FINDER</h1>
+    <label for="pac-input">Search</label>
+    <input id="pac-input" class="controls" type="text" name="beachFinder"  placeholder="Search Box" >
+    <div id="map"></div>
   </body>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwWrPS2_Cc1tC-8cSuo37mKD4GAuzerl0&libraries=places"
+      async defer>
+  </script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="/javascripts/main.js"></script>
 </html>
