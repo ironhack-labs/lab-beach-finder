@@ -1,11 +1,16 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
-</html>
+<h3>My First Map</h3>
+
+<form action="/" id="locationField">
+  <label>Beach:</label>
+  <input id="autocomplete" placeholder="Look for a beach" onFocus="geolocate()" type="text" name="search"></input>
+  <button type="submit">Search</button>
+</form>
+<div id="map"></div>
+
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7QGWvoGR_khK0QwP99KY3yE-RtYlMITQ">
+</script>
+<script type=“text/javascript” src=“https://maps.googleapis.com/maps/api/js?key=AIzaSyB7KojdDLAnH1zfWjVSGkKS-71m4ezvFik&libraries=places“></script>
+<script type=“text/javascript” src=“https://code.jquery.com/jquery-3.2.1.min.js”></script>
+<script type="text/javascript" src="javascripts/main.js"></script>
