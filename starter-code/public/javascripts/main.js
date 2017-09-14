@@ -20,8 +20,8 @@ function initialize() {
   var geoObject= "";
   autocomplete.addListener( 'place_changed', function() {
     var place = autocomplete.getPlace();
-    Name = place;
-    console.log(Name);
+    geoObject = place;
+    console.log(geoObject);
 
     if (!place.geometry.location) {
        window.alert("No details available for input: '" + place.name + "'");
