@@ -9,6 +9,8 @@ var index = require('./routes/index');
 
 var app = express();
 
+// var APIKey = AIzaSyAsTxaLjBpUZyb3MXCobvZeHwOvqgGPdhM;
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
