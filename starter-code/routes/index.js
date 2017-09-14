@@ -12,7 +12,7 @@ router.post('/save', (req, res, next) => {
 
   const beachInfo = new Beach ({
   name: req.body.name,
-  flag: 'red'
+  flag: req.body.flag
   });
 
   beachInfo.save((err) => {
@@ -22,6 +22,14 @@ router.post('/save', (req, res, next) => {
     else {
     res.redirect('/');
   }
+  });
+});
+
+router.get('/', (req, res, next) =>{
+  Beach.find({}, (err, beaches) => {
+    if (err) { next(err); }
+    else {
+      res.render('index', {beaches}); }
   });
 });
 
