@@ -11,9 +11,6 @@ function startMap() {
       }
     );
     var input = document.getElementById('pac-input');
-
-    map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
-
     var autocomplete = new google.maps.places.Autocomplete(input);
 
 

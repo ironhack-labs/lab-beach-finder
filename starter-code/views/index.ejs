@@ -1,18 +1,13 @@
 
 
   <form method="POST" action="/search">
-      <div id="pac-container">
-        <input id="pac-input" type="text"
-            placeholder="Enter a location">
-      </div>
+  Search for a beach:
+    <input id="pac-input" type="text" placeholder="Enter a location">
+    <button type="submit" name="search">Search</button>
   </form>
-    <div id="map"></div>
-    <div id="infowindow-content">
-      <img src="" width="16" height="16" id="place-icon">
-      <span id="place-name"  class="title"></span><br>
-      <span id="place-address"></span>
-    </div>
-
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCuuRe_95Mea-R9N_juEA8xGzd-wKkLcPo&libraries=places"></script>
-    <script type="text/javascript" src="/javascripts/index.js"></script>
+  <br>
+  <div id="map"></div>
+    
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCuuRe_95Mea-R9N_juEA8xGzd-wKkLcPo&libraries=places"></script>
+  <script type="text/javascript" src="/javascripts/index.js"></script>
   
