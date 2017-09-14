@@ -6,6 +6,8 @@ router.get('/', (req, res, next) => {
   res.render('index');
 });
 
+
+
 // router.post('/search', (req, res, next) => {
 //   const beachInfo = {
 //   name: req.body.name,
