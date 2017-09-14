@@ -49,7 +49,7 @@ function startMap() {
         marker.addListener('click', function() {
           infowindow.open(map, marker);
         });
-
+            
         autocomplete.addListener('place_changed', function() {
           infowindow.close();
           var place = autocomplete.getPlace();
