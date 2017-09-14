@@ -20,7 +20,6 @@ function initialize() {
   var autocomplete = new google.maps.places.Autocomplete(input);
 
 
-
 autocomplete.addListener( 'place_changed', function() {
     var place = autocomplete.getPlace();
     globalName=place;
@@ -31,6 +30,10 @@ autocomplete.addListener( 'place_changed', function() {
       map.setCenter(place.geometry.location);
       map.setZoom(17);
     }
+    marker.setPlace({
+    placeId: place.place_id,
+    location: place.geometry.location
+  });
   });
 
 }
