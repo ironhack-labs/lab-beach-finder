@@ -2,6 +2,7 @@ function startMap() {
     var ironhackBCN = {
         lat: 31.3977381,
         lng: 2.190471916};
+    
     var map = new google.maps.Map(
       document.getElementById('map'),
       {
@@ -9,6 +10,13 @@ function startMap() {
         center: ironhackBCN
       }
     );
+    var input = document.getElementById('pac-input');
+
+    map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+    var autocomplete = new google.maps.places.Autocomplete(input);
+
+
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function (position) {
           const user_location = {
@@ -35,16 +43,6 @@ function startMap() {
         console.log('Browser does not support geolocation.');
     }
 
-    google.maps.event.addListener(map, 'click', function( event ){
-        var marker = new google.maps.Marker({
-            position: {lat: event.latLng.lat(), lng: event.latLng.lng()},
-            map: map
-          });
-          console.log(document.getElementById('latitude'));
-          document.getElementById('latitude').value=event.latLng.lat();
-          document.getElementById('longitude').value=event.latLng.lng();
-        console.log( "Latitude: "+event.latLng.lat()+" "+", longitude: "+event.latLng.lng() );
-    });
 }
 
 startMap();
