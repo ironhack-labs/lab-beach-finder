@@ -1,13 +1,13 @@
 
 
-  <form>
+  <form action="/save" method="POST">
   Search for a beach:
-    <input id="pac-input" type="text" placeholder="Enter a location">
-    <button id="searchBtn" type="submit" name="search">Search</button>
+    <input id="pac-input" type="text" name="name" placeholder="Enter a location">
+    <button id="saveBtn" type="submit" name="save">Save</button>
   </form>
+
   <br>
   <div id="map"></div>
-    
+
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCuuRe_95Mea-R9N_juEA8xGzd-wKkLcPo&libraries=places"></script>
   <script type="text/javascript" src="/javascripts/index.js"></script>
-  
