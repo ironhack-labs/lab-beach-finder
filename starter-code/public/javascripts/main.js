@@ -12,7 +12,7 @@ function initialize() {
   var marker = new google.maps.Marker({
        map: map
      });
-     
+
   var input =  document.getElementById('pac-input');
 
   // Create the autocomplete helper, and associate it with
@@ -21,8 +21,17 @@ function initialize() {
 
 
 
-/////////////////////////
-
+autocomplete.addListener( 'place_changed', function() {
+    var place = autocomplete.getPlace();
+    globalName=place;
+    if (!place.geometry.location) {
+       window.alert("No details available for input: '" + place.name + "'");
+      return;
+    } else {
+      map.setCenter(place.geometry.location);
+      map.setZoom(17);
+    }
+  });
 
 }
 window.onload = function(){
