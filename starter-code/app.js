@@ -7,14 +7,17 @@ const bodyParser         = require('body-parser');
 const expressLayouts     = require('express-ejs-layouts');
 const mongoose           = require('mongoose');
 
+const index = require('./routes/index');
 
-var app = express();
+const app = express();
 
 mongoose.connect('mongodb://localhost:27017/beach-finder');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+app.set('layout', 'layouts/main-layout');
+app.use(expressLayouts);
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
