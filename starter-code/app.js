@@ -7,6 +7,9 @@ var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 
+const mongoose = require('mongoose');
+mongoose.connect("mongodb://localhost/beach-finder", {useMongoClient: true});
+
 var app = express();
 
 // view engine setup

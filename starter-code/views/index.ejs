@@ -7,5 +7,26 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <form>
+    <label>Search beach: <input id="searchBox" type="text">
+      <input type="button" value="search">
+    </label>
+    </form>
+    <br>
+    <div id="map"></div>
+    <br>
+    <form action="">
+      <input type="radio" name="flag" value="green"><img src="images/green-flag.png">
+      <input type="radio" name="flag" value="yellow"><img src="images/yellow-flag.png">
+      <input type="radio" name="flag" value="red"><img src="images/red-flag.png">
+    </form>
+
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+    <script src="/javascripts/main.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8x2yECkod4XOIiSdbMd0a6z88BMCiolc&libraries=places"></script>
   </body>
+
 </html>
