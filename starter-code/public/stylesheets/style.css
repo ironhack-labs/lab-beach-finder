@@ -6,3 +6,17 @@ body {
 a {
   color: #00B7FF;
 }
+
+
+#container {
+  margin-bottom: 90px;
+  margin-left: 950px;
+}
+
+#white-container, #color-container {
+  position : absolute;
+  }
+
+#color-container {
+  opacity: 0;
+}
