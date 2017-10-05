@@ -1,11 +1,40 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>Beach finder</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+  <div class="container">
+    <div class="container-search">
+      <h1>Beach finder</h1>
+      <form  action="/" method="post">
+        <input id="pac-input" class="controls" type="text" name="search" placeholder="Seclect your beach">
+        <button type="submit" name="button">Search</button>
+      </form>
+    </div>
+    <div class="container-flag">
+      <h2 id="text"><%=place %></h2>
+      <div class="flag">
+        <form name="form1" method="post" action="/flag">
+          <input type="radio" name="flag" value="red"><img src="https://raw.githubusercontent.com/ironhack/lab-beach-finder/solution/solution-code/public/images/red-flag.png?token=AcX1bzVt6XKsoUfKXsA5Im74QtT2y5Rkks5Z30s9wA%3D%3D" alt="red flag"></option>
+          <input type="radio" name="flag" value="green"><img src="https://raw.githubusercontent.com/ironhack/lab-beach-finder/solution/solution-code/public/images/green-flag.png?token=AcX1b41xtWO-xrd-Df1EIaFxO6OCqFniks5Z30s6wA%3D%3D" alt="green flag"></option>
+          <input type="radio" name="flag" value="yellow" selected="true"><img src="https://raw.githubusercontent.com/ironhack/lab-beach-finder/solution/solution-code/public/images/yellow-flag.png?token=AcX1b9UGZlxEekDTB0oSspJkb1rW9lJ_ks5Z30s_wA%3D%3D" alt="white flag"></option>
+        </select>
+      </div>
+    </div>
+      </div>
+    <br>
+    <br>
+
+    <div id="map"></div>
+
+
+  <script type="text/javascript"
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtou5WzJkLsEtspJTSR7Wm4m2pnJc8lRo&libraries=places&callback=initAutocomplete" async defer></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="/javascripts/main.js"></script>
   </body>
 </html>
