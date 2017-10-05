@@ -7,5 +7,27 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+<div class="searchbar">
+
+  <input id="autocomplete" placeholder="Enter your address" type="text"></input>
+ <button id="searchButton"type="submit" name="search">Search</button>
+</div>
+<div class="flag">
+  <button class="buttonFlag"type="radio" name="button"></button> <img src="https://raw.githubusercontent.com/ironhack/lab-beach-finder/solution/solution-code/public/images/red-flag.png?token=AcX1bzVt6XKsoUfKXsA5Im74QtT2y5Rkks5Z30s9wA%3D%3D" alt="">
+    <button class="buttonFlag"type="radio" name="button"></button> <img src="https://raw.githubusercontent.com/ironhack/lab-beach-finder/solution/solution-code/public/images/green-flag.png?token=AcX1b41xtWO-xrd-Df1EIaFxO6OCqFniks5Z30s6wA%3D%3D" alt="">
+    <button class="buttonFlag"type="radio" name="button"></button> <img src="https://raw.githubusercontent.com/ironhack/lab-beach-finder/solution/solution-code/public/images/flag.png?token=AcX1b91NTqSWWTweqt1m93RgzQr_lVCZks5Z30ruwA%3D%3D" alt="">
+    <button class="buttonFlag"type="radio" name="button"></button> <img src="https://raw.githubusercontent.com/ironhack/lab-beach-finder/solution/solution-code/public/images/yellow-flag.png?token=AcX1b9UGZlxEekDTB0oSspJkb1rW9lJ_ks5Z30s_wA%3D%3D"alt="">
+
+ </div>
+
+    <div id="map"></div>
+
   </body>
+
+
+  <script  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCm-dfGYck4P0J9rcDy4nGpJOt6BXq-54w&libraries=places">
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="/javascripts/main.js" ></script>
 </html>
