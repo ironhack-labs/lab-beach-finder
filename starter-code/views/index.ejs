@@ -1,11 +1,42 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+        <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous">
+  </script>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <h3>My Beachs</h3>
+    <input id="pac-input" class="controls" type="text"
+        placeholder="Enter a location">
+    <div id="type-selector" class="controls">
+      <input type="radio" name="type" id="changetype-all" checked="checked">
+      <label for="changetype-all">All</label>
+      <input type="radio" name="type" id="changetype-establishment">
+      <label for="changetype-establishment">Establishments</label>
+      <input type="radio" name="type" id="changetype-address">
+      <label for="changetype-address">Addresses</label>
+      <input type="radio" name="type" id="changetype-geocode">
+      <label for="changetype-geocode">Geocodes</label>
+    </div>
+<div class="container">
+  <button id="red" class="change">RED</button>
+  <button id="yellow" class"change">yellow</button>
+  <button id="green" class="change">green</button>
+</div>
+    <div id="map"></div>
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7W0HY5n39NygEXomWtZNtHOXR9QAtqCU&libraries=places"></script>
+
+    <script type="text/javascript" src="javascript/main.js"></script>
   </body>
 </html>
