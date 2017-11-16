@@ -1,8 +1,87 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
 
-a {
-  color: #00B7FF;
-}
+  #map {
+    height: 400px;
+    width: 100%;
+  }¡
+
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .controls {
+    margin-top: 10px;
+    border: 1px solid transparent;
+    border-radius: 2px 0 0 2px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    height: 32px;
+    outline: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  }
+
+  #pac-input {
+    background-color: #fff;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+    margin-left: 12px;
+    padding: 0 11px 0 13px;
+    text-overflow: ellipsis;
+    width: 300px;
+  }
+
+  #pac-input:focus {
+    border-color: #4d90fe;
+  }
+
+  .pac-container {
+    font-family: Roboto;
+  }
+
+  #type-selector {
+    color: #fff;
+    background-color: #4d90fe;
+    padding: 5px 11px 0px 11px;
+  }
+
+  #type-selector label {
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 300;
+  }
+
+  #flags button {
+        width: 40px;
+        height: 40px;
+        border-radius: 4px;
+        border-color: #D5D5D5;
+        background: #FFF;
+        cursor: pointer;
+      }
+      #flags button span {
+        font-size: 0;
+      }
+      #flags h4 {
+        display: inline-block;
+      }
+      #flags button.red:hover,
+      #flags button.red:focus {
+        background: #FF0000;
+        border-color: #BF0000;
+      }
+      #flags button.yellow:hover,
+      #flags button.yellow:focus {
+        background: #F0FF00;
+        border-color: #F2D11B;
+      }
+      #flags button.green:hover,
+      #flags button.green:focus {
+        background: #00FA53;
+        border-color: #00DE4A;
+      }
+      #flags {
+              position: absolute;
+              top: 20px;
+              right: 60px;
+            }
