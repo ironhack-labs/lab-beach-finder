@@ -71,6 +71,7 @@
         });
 
         autocomplete.addListener('place_changed', function() {
+
           infowindow.close();
           marker.setVisible(false);
           var place = autocomplete.getPlace();
@@ -96,6 +97,9 @@
             scaledSize: new google.maps.Size(35, 35)
           }));
           marker.setPosition(place.geometry.location);
+          console.log("hola")
+          console.log(place.geometry.location.lng())
+          console.log(place.geometry.location.lat())
           marker.setVisible(true);
 
           var address = '';
@@ -111,7 +115,7 @@
           infowindow.open(map, marker);
         });
 
-        
+
       }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0C7KJiRPXdLYerjbxoyMaDC_AVsJb6ps&libraries=places&callback=initMap"
