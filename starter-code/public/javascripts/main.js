@@ -1,29 +1,34 @@
+console.log("connected");
+
 function initialize() {
-  var mapOptions = {
+  console.log("connected");
+  let mapOptions = {
     center: {
-      lat: -33.8688,
-      lng: 151.2195
+      lat: 43.498104,
+      lng: -8.318915
     },
-    zoom: 13,
+    zoom: 17,
     scrollwheel: false
   };
-  var map = new google.maps.Map(document.getElementById('map'),
+  let map = new google.maps.Map(document.getElementById('map'),
     mapOptions);
 
-  var input = /** @type {HTMLInputElement} */ (
-    document.getElementById('pac-input'));
+  let input = (document.getElementById('bitch'));
 
   // Create the autocomplete helper, and associate it with
   // an HTML text input box.
-  var autocomplete = new google.maps.places.Autocomplete(input);
+  let autocomplete = new google.maps.places.Autocomplete(input);
   autocomplete.bindTo('bounds', map);
 
   map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
-  var infowindow = new google.maps.InfoWindow();
-  var marker = new google.maps.Marker({
+  let infowindow = new google.maps.InfoWindow();
+  let marker = new google.maps.Marker({
     map: map
   });
+
+
+
   google.maps.event.addListener(marker, 'click', function () {
     infowindow.open(map, marker);
   });
@@ -32,7 +37,7 @@ function initialize() {
   // list of suggestions.
   google.maps.event.addListener(autocomplete, 'place_changed', function () {
     infowindow.close();
-    var place = autocomplete.getPlace();
+    let place = autocomplete.getPlace();
     if (!place.geometry) {
       return;
     }
@@ -51,6 +56,7 @@ function initialize() {
     }));
     marker.setVisible(true);
 
+
     infowindow.setContent('<div><strong>' + place.name + '</strong><br>' +
       'Place ID: ' + place.place_id + '<br>' +
       place.formatted_address + '</div>');
@@ -58,59 +64,38 @@ function initialize() {
   });
 }
 
+function showFeedback(postResponse) {
+  console.log('post success');
+  console.log(postResponse);
+}
+
+function handleError(err) {
+  console.log('Oh no! Error:');
+  console.log(err);
+}
+window.onload = function () {
+  initialize()
+  var buttons = Array.from(document.querySelectorAll('.js-send'));
+  buttons.forEach(function (button) {
+    button.addEventListener('click', function (event) {
+      event.preventDefault();
+      let input = document.getElementById("bitch").value
+      let color = this.name
+      $.ajax({
+        // Notice that we are using POST
+        type: 'POST',
+        url: '/',
+        // The data key is for sending data in a POST, PUT or PATCH!
+        data: {
+          name: input,
+          color
+        },
+        success: showFeedback,
+        error: handleError
+      });
+      location.reload();
+    })
+  })
+}
 // Run the initialize function when the window has finished loading.
-google.maps.event.addDomListener(window, 'load', initialize);
-
-
-// Change color
-$('.red').click(function () {
-  $(this).toggleClass('redo');
-  axios.post('/', {
-      "name": $('input').val(),
-      "flag": 'Red'
-    })
-    .then(function (response) {
-      console.log(response);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-});
-
-$('.yellow').click(function () {
-  $(this).toggleClass('yellowo');
-  axios.post('/', {
-      "name": $('input').val(),
-      "flag": 'Yellow'
-    })
-    .then(function (response) {
-      console.log(response);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-});
-
-$('.green').click(function () {
-  $(this).toggleClass('greeno');
-  axios.post('/', {
-      "name": $('input').val(),
-      "flag": 'Green'
-    })
-    .then(function (response) {
-      console.log(response);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-});
-
-
-
-$('input').keydown(function (e) {
-  axios.get('/flags', {
-    params: {
-      search: $('input').val()
-    }
-  });
-});
+// google.maps.event.addDomListener(window, 'load', initialize);

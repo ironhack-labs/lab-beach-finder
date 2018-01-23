@@ -2,42 +2,45 @@
 <html>
 
 <head>
-  <title>
-    Beach Finder
-  </title>
   <link rel='stylesheet' href='/stylesheets/style.css' />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
 
 <body>
-
-  <div class="fluid-container">
-    <div class="row">
-      <div class="col-md-12">
-        <h1>Beach Finder</h1>
-        <div class="col-md-9">
-          <p>Welcome to Beach Finder</p>
-        </div>
-        <div class="col-md-3">
-          <img src="/img/green.png" alt="" class="icon green">
-          <img src="/img/yellow.png" alt="" class="icon yellow">
-          <img src="/img/red.png" alt="" class="icon red">
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <input type="text" name="bf" id="pac-input">
-
+  <h1>Bitches</h1>
+  <p>Welcome to Bitches</p>
+  <p>Mira las bitches</p>
+  <ul>
+    <% beaches.forEach((bitch) => { %>
+      <li>
+        <%= bitch.name%>
+          <span> | Flag Color:
+            <%= bitch.flagColor %>
+          </span>
+          <span> | Updated at:
+            <%= bitch.updated_at %>
+          </span>
+          </a>
+      </li>
+      <% }) %>
+  </ul>
+  <form action="#">
+    <label for="">Search for bitch:</label>
+    <input id="bitch" type="text" name="bitch">
+    <input type="submit" value="Red" class="js-send" name="Red">
+    <input type="submit" value="Yellow" class="js-send" name="Yellow">
+    <input type="submit" value="Green" class="js-send" name="Green">
+  </form>
   <div id="map">
 
   </div>
 </body>
+<!-- <script src="https://maps.googleapis.com/maps/api/js?&library=Autocomplete&key=AIzaSyDZXQMP2GuykxkAKb5m3NpmBJ1NvIZ0WfA"></script> -->
+<!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/place/autocomplete/json?&key="> -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZXQMP2GuykxkAKb5m3NpmBJ1NvIZ0WfA&libraries=places" async
+  defer></script>
 
-</html>
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAiAS1k9vjWwirp49V4lyQWJyiylliJAcg&libraries=places"></script>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script type="text/javascript" src="/javascripts/main.js"></script>
+
+</html>

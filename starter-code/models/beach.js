@@ -3,9 +3,14 @@ const Schema = mongoose.Schema;
 
 const BeachSchema = new Schema({
   name: String,
-  flag: {
+  flagColor: {
     type: String,
-    enum: ['Red', 'Yellow', 'Green']
+    enum: ["Red", "Yellow", "Green"]
+  }
+}, {
+  timestamps: {
+    createdAt: "created_at",
+    updatedAt: "updated_at"
   }
 });
 
