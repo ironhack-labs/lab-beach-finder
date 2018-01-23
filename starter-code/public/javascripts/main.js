@@ -59,6 +59,9 @@ function initialize() {
 
     infowindow.setContent('<div><strong>' + place.name + '</strong><br>' +
       'Place ID: ' + place.place_id + '<br>' +
+      '<br>' +
+      'Flag : ' + bitch[0].flagColor + // I need some help ;)
+      '<br>' +
       place.formatted_address + '</div>');
     infowindow.open(map, marker);
   });

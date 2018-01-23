@@ -4,15 +4,16 @@ var Beach = require('../models/beach');
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-  Beach.find((error, beaches) => {
+  Beach.find({}, (error, beaches) => {
     if (error) {
       next(error);
     } else {
+      console.log(beaches);
       res.render('index', {
-        beaches
+        beaches,
       });
     }
-  })
+  });
 });
 
 router.post('/', function (req, res, next) {
