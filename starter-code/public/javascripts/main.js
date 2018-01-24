@@ -56,16 +56,26 @@ function initialize() {
     }));
     marker.setVisible(true);
 
+    // Find the flag
+    var flag = "";
+    for (var i = 0; i <= bitch.length -1; i++) {
+      if (bitch[i].name == place.formatted_address) {
+        flag = bitch[i].flagColor;
+      }
+    }
+    console.log(flag);
 
     infowindow.setContent('<div><strong>' + place.name + '</strong><br>' +
       'Place ID: ' + place.place_id + '<br>' +
       '<br>' +
-      'Flag : ' + bitch[0].flagColor + // I need some help ;)
+      'Flag : ' + flag +
       '<br>' +
       place.formatted_address + '</div>');
     infowindow.open(map, marker);
   });
 }
+
+
 
 function showFeedback(postResponse) {
   console.log('post success');
