@@ -7,7 +7,9 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose')
 const index = require('./routes/index');
 const users = require('./routes/user');
+
 mongoose.connect('mongodb://localhost/beaches')
+
 const app = express();
 
 
