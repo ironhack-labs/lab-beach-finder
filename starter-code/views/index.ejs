@@ -1,11 +1,39 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>Place Autocomplete</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <meta charset="utf-8">
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <h1>Beach Finder</h1>
+    <input id="pac-input" class="controls" name="name" type="text"
+        placeholder="Enter a location">
+    </div>
+    <div id="map"></div>
+    <div id="flags">
+      <h4>Flags</h4>
+      <form  action="/" method="post">
+        <input type="hidden" name="name" class="beachname">
+        <input type="hidden" name="color" value="red">
+        <button value="red" class="flag red" name="redFlag"><span>Red</span></button>
+      </form>
+      <form  action="/" method="post">
+        <input type="hidden" name="name" class="beachname">
+        <input type="hidden" name="color" value="yellow">
+        <button value="yellow" class="flag yellow" name="yellowFlag"><span>Yellow</span></button>
+      </form>
+      <form  action="/" method="post">
+        <input type="hidden" name="name" class="beachname">
+        <input type="hidden" name="color" value="green">
+        <button value="green" class="flag green" name="greenFlag"><span>Green</span></button>
+      </form>
+    </div>
+    <script type="text/javascript" src="/javascripts/map.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBicoJYX_nIKP_7s0nLr5bl6nkfomGgxA8&callback=initMap"></script>
   </body>
 </html>
+   
