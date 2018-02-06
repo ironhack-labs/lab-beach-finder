@@ -1,0 +1,19 @@
+{
+  "name": "lab-beach-finder",
+  "version": "1.0.0",
+  "description": "![Ironhack logo](https://i.imgur.com/1QgrNNw.png)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alltimelaura13/lab-beach-finder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alltimelaura13/lab-beach-finder/issues"
+  },
+  "homepage": "https://github.com/alltimelaura13/lab-beach-finder#readme"
+}
