@@ -7,12 +7,18 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
     <label for="dateFrom">Beach:</label>
-    <input type="text" id="autocomplete">
-    <button id="buttonSearch" onclick="search()" >Search</button>
+    <input type="text" id="beach">
     <br>
     <br>
     <div id="map"></div>
+    <div id="listing">
+        <table id="resultsTable">
+          <tbody id="results"></tbody>
+        </table>
+      </div>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDD4N4bWlqYvM629tijHzdukIsgwpmzPSE&libraries=places&callback=startMap">
     </script>
     <script type="text/javascript" src="/javascripts/beach.js"></script>
