@@ -23,6 +23,10 @@ $(document).ready(function(){
       lng: place.geometry.location.lng()
     };
 
+    var marker = new google.maps.Marker({
+      position: location,
+      map: map
+    });
     map.setCenter(location);
   }
 
