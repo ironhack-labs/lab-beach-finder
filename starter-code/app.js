@@ -4,6 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+const debug = require('debug')(`lab-beach-finder:${path.basename(__filename).split('.')[0]}`);
 
 var index = require('./routes/index');
 

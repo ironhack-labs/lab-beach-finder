@@ -1,11 +1,23 @@
+<!-- main.html -->
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>Beach Finder</title>
+    <style>
+       #map {
+        height: 500px;
+        width: 100%;
+       }
+    </style>
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <h3>Beach Finder</h3>
+      Beach:
+      <input id="pac-input" type="text">
+      <br>
+      <br>
+    <div id="map" style="width: 900px; height: 600px;"></div>
+    <script type="text/javascript" src="./js/main.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYE1UeBggKIw7SGs2a9JqqobxOV6pjBos&libraries=places&callback=startMap"></script>
   </body>
 </html>
