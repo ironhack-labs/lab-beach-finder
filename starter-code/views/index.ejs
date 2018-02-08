@@ -1,11 +1,49 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <style>
+    #map {
+      height: 500px;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>
+    <%= title %>
+  </h1>
+  <!-- <div id="findbeaches">
+    Find beaches in:
+  </div> -->
+
+  <div id="locationField">
+    <form action="">
+      <label for="autocomplete">Find beaches in</label>
+      <input id="autocomplete" placeholder="Enter a city" type="text" />
+      <input type="submit" value="Search">
+    </form>
+  </div>
+
+
+  <div id="map"></div>
+
+  <div id="listing">
+    <table id="resultsTable">
+      <tbody id="results"></tbody>
+    </table>
+  </div>
+
+
+
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCw5a1gCSta4aEeWSDFkseptCwQkUKvfpo&libraries=places&callback=startMap">
+  </script>
+  <script type="text/javascript" src="javascript/main.js"></script>
+</body>
+
 </html>
