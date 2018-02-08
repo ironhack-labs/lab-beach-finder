@@ -7,5 +7,14 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <label for="dateFrom">Beach:</label>
+    <input type="text">
+    <button id="buttonSearch" >Search</button>
+    <br>
+    <br>
+    <div id="map"></div>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDD4N4bWlqYvM629tijHzdukIsgwpmzPSE&callback=startMap">
+    </script>
+    <script type="text/javascript" src="/javascripts/beach.js"></script>
   </body>
 </html>
