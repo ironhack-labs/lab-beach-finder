@@ -5,15 +5,10 @@ function startMap(){
       zoom: 13,
       center:location
     });
-    }
     let defaultBounds = new google.maps.LatLngBounds(
         new google.maps.LatLng(42.827533, -9.105644),
     )
-    
-let options= {
-    bounds:defaultBounds
-};
-
-let input= document.getElementById("pac-input")
-
-    startMap();
+let input= document.getElementById('pac-input');
+let autocomplete = new  google.maps.places.Autocomplete(input);
+ };
+  startMap();
