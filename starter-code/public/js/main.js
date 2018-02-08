@@ -5,7 +5,7 @@ $(document).ready(function(){
   };
 //IzaSyBrAAqnQXzz9Vf9rVVtpKon6G4M3HmkcRw API GOOGLE PLACES KEY
   const map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 10,
+    zoom: 15,
     center: florida
   });
 
@@ -15,14 +15,18 @@ $(document).ready(function(){
   const places = new google.maps.places.PlacesService(map);
 
   function onPlaceChanged(){
-    console.log("Playa")
+
+    let place = autocomplete.getPlace();
+
+    let location = {
+      lat: place.geometry.location.lat(),
+      lng: place.geometry.location.lng()
+    };
+
+    map.setCenter(location);
   }
 
-  autocomplete.addListener('place_changed', onPlaceChanged);
-
-// Add a DOM event listener to react when the user selects a country.
-//document.getElementById('country').addEventListener(
-  //  'change', setAutocompleteCountry);
-
+  //autocomplete.addListener('place_changed', onPlaceChanged);
+  $("#searchPlace").on('click', onPlaceChanged);
 
 });
