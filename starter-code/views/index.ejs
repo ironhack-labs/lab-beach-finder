@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>Beach finder</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <h1>Beach finder</h1>
+    <div id="map"></div>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+ 
+     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3OfZTex1PmjzZploTMEeZThN3bbztSuY&libraries=places"></script>
+     <script src="/js/main.js"></script>
   </body>
 </html>
