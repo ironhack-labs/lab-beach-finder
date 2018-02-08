@@ -1,11 +1,36 @@
+<!-- main.html -->
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>My First Map</title>
+    <style>
+       #map {
+        height: 500px;
+        width: 100%;
+       }
+    </style>
+    
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <h3>Beach finder</h3>
+    <div>
+      <label for="beach">Beach: </label>
+      <input type="text" id="name-beach">
+      <form action="">
+        <button id="button">Search</button>
+      </form>
+    </div>
+    <div id="infowindow-content">
+      <span id="place-name"  class="title"></span>
+      <span id="place-id"></span><br>
+      <span id="place-address"></span>
+    </div>
+    <div id="map"></div>
+    
+
+    
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCTX2jwMm7vJ7LN1fGr8VNEQFcbR2Kyj0&libraries=places"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="javascripts/main.js"></script>
   </body>
 </html>
