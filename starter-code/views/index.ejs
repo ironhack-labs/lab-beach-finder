@@ -1,11 +1,49 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+
+<head>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <h1>Bitches</h1>
+  <p>Welcome to Bitches</p>
+  <p>Mira las bitches</p>
+  <ul>
+    <% beaches.forEach((bitch) => { %>
+      <li>
+        <%= bitch.name%>
+          <span> | Flag Color:
+            <%= bitch.flagColor %>
+          </span>
+          <span> | Updated at:
+            <%= bitch.updated_at %>
+          </span>
+          </a>
+      </li>
+      <% }) %>
+  </ul>
+  <form action="#">
+    <label for="">Search for bitch:</label>
+    <input id="bitch" type="text" name="bitch">
+    <input type="submit" value="Red" class="js-send" name="Red">
+    <input type="submit" value="Yellow" class="js-send" name="Yellow">
+    <input type="submit" value="Green" class="js-send" name="Green">
+  </form>
+  <div id="map">
+
+  </div>
+
+    <script>
+      var bitch =  <%- JSON.stringify(beaches) %>; // Thanks for the trick :p
+    </script>
+
+</body>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZXQMP2GuykxkAKb5m3NpmBJ1NvIZ0WfA&libraries=places" async
+  defer></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+<script type="text/javascript" src="/javascripts/main.js"></script>
+
 </html>
