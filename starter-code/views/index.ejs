@@ -1,11 +1,33 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+
+  <style>
+    #map {
+      height: 500px;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <h3>My First Map</h3>
+  <label>Busca tu playa -> </label>
+  <input id="searchTextField">
+  <select name="select" class="flag">
+    <option value="0" selected>Green</option>
+    <option value="1">Yellow</option>
+    <option value="2">Red</option>
+  </select>
+  <div id="map"></div>
+  <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="/javascripts/map.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcGrmaXrmo3C8CR1qhKD5M-hWlKLI2Rx4&libraries=places&callback=startMap"></script>
+</body>
+
 </html>
