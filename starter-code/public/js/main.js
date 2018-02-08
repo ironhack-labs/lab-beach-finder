@@ -9,4 +9,20 @@ $(document).ready(function(){
     center: florida
   });
 
+  const autocomplete = new google.maps.places.Autocomplete(
+    (document.getElementById('autocomplete')));
+
+  const places = new google.maps.places.PlacesService(map);
+
+  function onPlaceChanged(){
+    console.log("Playa")
+  }
+
+  autocomplete.addListener('place_changed', onPlaceChanged);
+
+// Add a DOM event listener to react when the user selects a country.
+//document.getElementById('country').addEventListener(
+  //  'change', setAutocompleteCountry);
+
+
 });
