@@ -6,3 +6,11 @@ body {
 a {
   color: #00B7FF;
 }
+#map{
+  margin-top: 40px;
+  height: 400px;
+  width: 100%;
+}
+#playa{
+  width: 300px;
+}
