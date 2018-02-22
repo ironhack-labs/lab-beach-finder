@@ -8,5 +8,5 @@ const BeachSchema = new Schema({
   }
 );
 
-const Post = mongoose.model('Beach', BeachSchema);
-module.exports = Post;
+const Beach = mongoose.model('Beach', BeachSchema);
+module.exports = Beach;
