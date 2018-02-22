@@ -2,24 +2,19 @@
 <html lang="en">
     <head>
       <title>My First Map</title>
-      <style>
-         #map {
-          height: 500px;
-          width: 100%;
-         }
-      </style>
+      <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
     </head>
-    <body>
-         
-      <h3>Beach Find</h3>
+    <body>  
+      <h1>Beach Find</h1>
       <div id="locationField">
-          <input id="autocomplete" placeholder="Enter Beach address" onFocus="geolocate()" type="text"></input>
+          <input id="beachAdress" placeholder="Enter Beach address" type="text" />
+          <input type="submit" />
         </div>
+        <br />
       <div id="map"></div>
-      <input id="beachMap" type="text" style="width:500px" />
-  
       <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCojtsDhUtaPi1ixmrZfwmYsWp-PWxb4UU&libraries=places">
-      </script>
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJxEwNFlxMp1P-n5XVIY7c24onDQrochU&libraries=places">
+    </script>
+      <script type="text/javascript" src="javascripts/app.js"></script>
     </body>
   </html>
