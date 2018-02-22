@@ -9,32 +9,63 @@ router.get('/', function(req, res, next) {
     if (error) {
       next(error);
     } else {
-      res.render('index', { beaches });
+      res.render('index', { beaches, beach: null });
     }
   })
 });
 
 router.post("/new", function(req, res, next) {
-  let location = {
-		type: 'Point',
-		coordinates: [req.body.longitude, req.body.latitude]
-	  };
-
-    const newBeach = {
-      name:        req.body.name,
-      flag: req.body.flag,
-      location:    location
-    };
-
-  	const beach = new Beach(newBeach);
-
-  	beach.save((error) => {
-  		if (error) {
-  			next(error);
-  		} else {
-  			res.redirect('/');
-  		}
-  	})
+  Beach.findOne({name:req.body.name}, (err, beach) => {
+    console.log(beach)
+    if (beach!=undefined) {
+      beach.flag=req.body.flag,
+      beach.save((error) => {
+        if (error) {
+          next(error);
+        } else {
+          res.redirect('/');
+        }
+      })
+    } else {
+      let location = {
+        type: 'Point',
+        coordinates: [req.body.longitude, req.body.latitude]
+        };
+    
+        const newBeach = {
+          name:        req.body.name,
+          flag: req.body.flag,
+          location:    location
+        };
+    
+        const beachNu = new Beach(newBeach);
+    
+        beachNu.save((error) => {
+          if (error) {
+            next(error);
+          } else {
+            res.redirect('/');
+          }
+        })
+    }
+  })
 });
+
+router.get("/:id", function(req, res, next){
+  Beach.find((error, beaches) => {
+    if (error) {
+      next(error);
+    } else {
+      Beach.findOne({_id:req.params.id}, (err, beach) => {
+        if (err) {
+          next(err);
+        } else {
+          res.render('index', { beaches, beach });
+        }
+      })
+    }
+  })
+  
+})
 
 module.exports = router;

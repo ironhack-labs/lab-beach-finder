@@ -5,11 +5,25 @@ function startMap(){
     lat: 19.4021721, 
     lng: -99.1891731
   };
-
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 15,
-    center: ironhackMEX
-  });
+  if (myBeach!=null){
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 15,
+      center: {
+        lat: myBeach.location.coordinates[1],
+        lng: myBeach.location.coordinates[0]
+      }
+    });
+    document.getElementById("searchBar").value = myBeach.name;
+    document.getElementById("latitude").value = myBeach.location.coordinates[1];
+    document.getElementById("longitude").value = myBeach.location.coordinates[0];
+    document.getElementById("flag").value = myBeach.flag;
+  } else{
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 15,
+      center: ironhackMEX
+    });
+  }
+  
   var input = document.getElementById("searchBar");
 
     function autocomplete(input){
@@ -53,3 +67,12 @@ function startMap(){
 }
 
 startMap()
+
+$(document).ready(function() {
+  $(window).keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
