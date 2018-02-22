@@ -10,3 +10,9 @@ a {
   height: 500px;
   width: 100%; 
 }
+form {
+  float: right;
+  display: inline-block;
+  padding: 20px;
+
+}
