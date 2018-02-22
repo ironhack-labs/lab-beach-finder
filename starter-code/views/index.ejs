@@ -17,14 +17,17 @@
     <label>Longitude</label>
     <input type="text" name="longitude" id="longitude" readonly>
     <label>Flag Color</label>
-    <select>
-      <option id="yellow" value="yellow">Green (Safe to swin)</option>
-      <option id="green" value="green">Yellow (Be careful)</option>
+    <select name="flag">
+      <option id="green" value="green">Green (Safe to swin)</option>
+      <option id="yellow" value="yellow">Yellow (Be careful)</option>
       <option id="red" value="red">Red (No swimming)</option>
     </select>
     <input type="submit" value="Sumbit!">
     </form>
 
+    <% for (var i=0; i<beaches.length; i++){%>
+      <div > <p><%=beaches[i].name%> has a <span id=<%=beaches[i].flag%>><%=beaches[i].flag%> flag</span></p> </div>
+    <% } %>
     <script type="text/javascript">
       var myBeaches = <%- JSON.stringify(beaches) %>
       </script>
