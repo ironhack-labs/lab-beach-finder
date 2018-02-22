@@ -26,7 +26,7 @@
     </form>
 
     <% for (var i=0; i<beaches.length; i++){%>
-      <a href=<%="/"+beaches[i]._id%>><div> <p><%=beaches[i].name%> has a <span id=<%=beaches[i].flag%>><%=beaches[i].flag%> flag</span></p> </div></a>
+      <a href=<%="/"+beaches[i]._id%>><div> <p><%=beaches[i].name%> has a <span id=<%=beaches[i].flag%>><%=beaches[i].flag%> flag</span> updated at <%=beaches[i].updated_at%>></p> </div></a>
     <% } %>
     <script type="text/javascript">
       var myBeaches = <%- JSON.stringify(beaches) %>;
