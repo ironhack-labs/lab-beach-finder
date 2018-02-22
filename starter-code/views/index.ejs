@@ -1,11 +1,25 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
-</html>
+<html lang="en">
+    <head>
+      <title>My First Map</title>
+      <style>
+         #map {
+          height: 500px;
+          width: 100%;
+         }
+      </style>
+    </head>
+    <body>
+         
+      <h3>Beach Find</h3>
+      <div id="locationField">
+          <input id="autocomplete" placeholder="Enter Beach address" onFocus="geolocate()" type="text"></input>
+        </div>
+      <div id="map"></div>
+      <input id="beachMap" type="text" style="width:500px" />
+  
+      <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCojtsDhUtaPi1ixmrZfwmYsWp-PWxb4UU&libraries=places">
+      </script>
+    </body>
+  </html>
